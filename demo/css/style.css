@@ -1,0 +1,158 @@
+body{
+	background: #cecece;
+	height: 2000px;
+	margin: 0;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(7,152,199,0.8);
+	width: 100%;
+	height: auto;
+	display: flex;
+	display:-webkit-flex;
+	/*Safari*/
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align:center;
+	/*IE9*/
+	display:-ms-flexbox;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 4;
+}
+
+nav ul {
+	margin: 0;
+	display: flex;
+	display:-webkit-box;
+	width:51.1458% ;
+	min-width: 980px;
+	/* margin-top: 1%;
+	 margin-bottom: 1%;*/
+	/*padding-top: 1%;
+	padding-bottom: 1%;*/
+	padding-left: 0;
+	padding-right: 0;
+	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	justify-content: space-around;
+	-webkit-box-pack:justify ;
+	list-style-type:none;
+
+	/*IE9*/
+	display:-ms-flexbox;
+	-ms-flex-direction: row;
+}
+nav ul li {
+
+	padding-bottom:0.9em;
+	padding-top: 1.7em;
+	/*padding-bottom:1.9%;
+	padding-top: 2.6%;*/
+	flex-grow: 1;
+	-webkit-box-flex: 1;
+	text-align: center;
+
+}
+nav ul li a {
+	text-decoration: none;
+	font: 112% MyriadProRegular;
+	color:#ffffff;
+	opacity: 1;
+}
+nav ul li:nth-child(2) {
+	position: relative;
+}
+
+nav ul li:hover .drop-menu {
+	display: block;
+}
+nav ul li:hover {
+	background-color: #0798c7;
+	opacity: 1;
+}
+
+.nav-button {
+	display: none;
+}
+.strips {
+	display: none;
+}
+
+
+.drop-menu {
+	width:14%;
+	padding-top: 8%;
+	min-width: 265px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	list-style-type:none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+}
+.drop-menu li:hover {
+	background-color: #0798c7;
+}
+
+.drop-menu li {
+	background-color: rgba(7,152,199,0.8);
+	padding: 4.5% 0 4.5% 8%;
+	text-align: left;
+	cursor: pointer;
+}
+.drop-menu li a {
+	text-decoration: none;
+	font: 100% MyriadProRegular;
+	color:#ffffff;
+	/*line-height: 1%;*/
+}
+
+/* Style for screen with width 320px*/
+/*Начало Header*/
+@media only screen and (max-width: 700px) {
+
+	#naviMenu {
+		visibility: hidden;
+		opacity: 0;
+		z-index: 3;
+		transition: linear opacity 0.5s, linear visibility 0s;
+	}
+	nav {
+		display: flex;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: none;
+		height: 46px;
+		z-index: 1;
+		position: relative;
+	}
+	.nav-button {
+		display: block;
+		min-width: 50px;
+		height: 46px;
+	}
+	nav > ul {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		margin-top: 46px;
+		width: 101px;
+		min-width: 101px;
+		padding: 5px 0;
+		z-index: 2;
+		background-color: rgba(7,152,199,0.80);
+	}
+
+
+
+	/*Конец кнопки для монитора 320пк */
+}
+
