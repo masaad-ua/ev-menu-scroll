@@ -3,37 +3,31 @@
 	"use strict";
 
 	$.fn.evMenuScroll = function(obj){
-
 		var downing = true,
 			wasFixed = false,
 			fixed = 0,
 			currentValue = 0,
 			vm = this,
 			heightMenu = vm.outerHeight(true),
-			checkHeight = ((2*heightMenu) < obj.startShow )&& ((2*heightMenu) < obj.endShow),
 			parentOfMenu = vm.parent();
 
-
-
-		parentOfMenu.prepend($('<div/>')
-			.addClass('empty-block')
-			.css({'position': 'static', 'width': '100%'}));
+			parentOfMenu.prepend($('<div/>')
+				.addClass('empty-block')
+				.css({'position': 'static', 'width': '100%'}));
 
 
 		function showMenu(){
+			vm.css({'position': 'fixed', 'top': -heightMenu});
 			obj.animate ? vm.css({'position': 'fixed', 'top': -heightMenu}) : vm.css({'position': 'fixed'});
 			obj.animate && vm.css({'transform': 'translateY(' + heightMenu + 'px)'}).addClass('ev-custom');
-			console.log(vm);
 
 		}
 
 		function hideMenu(){
 			obj.animate && vm.css({'transform': 'translateY(0px)'}).removeClass('ev-custom');
-			obj.animate && vm.bind( "transitionend", function() {
+			obj.animate && vm.bind( "transitionend",function(){
 				vm.css({'position': 'absolute', 'top': 0, 'left': 0});
-				vm.unbind( "transitionend");
 			});
-
 			!obj.animate && vm.css({'position': 'absolute', 'top': 0, 'left': 0});
 		}
 
@@ -46,20 +40,19 @@
 					currentValue =  $(this).scrollTop();
 					/////DOWN
 					if( $(this).scrollTop() > obj.startShow && downing && !obj.fixedWhenUp ){
+						vm.unbind("transitionend");///
 						showMenu();
 						downing = false;
 					}
 
 					///if ---> obj.fixedWhenUp
-					if( $(this).scrollTop() > obj.startShow && obj.fixedWhenUp && !wasFixed){
+					else if( $(this).scrollTop() > obj.startShow && obj.fixedWhenUp && !wasFixed){
+						vm.unbind("transitionend");///
 						showMenu();
-						downing = false;
-						console.log("down1", wasFixed);
 					}
-					if( $(this).scrollTop() < obj.startShow  && obj.fixedWhenUp && wasFixed ){
+					else if( $(this).scrollTop() < obj.startShow  && obj.fixedWhenUp && wasFixed ){
 						hideMenu();
 						wasFixed = false;
-						console.log("down2", wasFixed);
 					}
 
 
@@ -73,11 +66,9 @@
 						downing = true;
 					}
 					///if ---> obj.fixedWhenUp
-					if ( obj.fixedWhenUp){
+					else if(obj.fixedWhenUp && !wasFixed){
 						wasFixed = true;
-						console.log("up", wasFixed)
 					}
-
 
 				}
 			}
