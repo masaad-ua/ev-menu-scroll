@@ -27,6 +27,8 @@ In html file you should simply create for you menu wrapper. And assign him (menu
 ```
 
 - CSS
+
+```
  .ev-absolute{
  	position: absolute !important;
  	top: 0 !important;
@@ -39,6 +41,7 @@ In html file you should simply create for you menu wrapper. And assign him (menu
  .ev-custom{
     your style!
  }
+```
 
 - JavaScript
 
@@ -51,7 +54,7 @@ For example:
 ```
 
 In you script you have to create abject with properties - parameters, which help to tune menu.
-- `startShow` - number - amount of px which define when menu start to be show in top of browser if we scrolling window from top to bottom.
+- `startShow` (_Number_) - amount of px which define when menu start to be show in top of browser if we scrolling window from top to bottom.
 
 ```javascript
 
