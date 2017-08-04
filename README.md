@@ -23,7 +23,7 @@ Plugin which help to tune the effect show and hide horizontal menu-panel.
 In html file you should simply create for you menu wrapper. And assign him (menu wrapper) id.
 
 ```html
-  <nav id="menuWrapper">Here is my menu!</nav>
+  <nav id="menuWrapper" class="ev-scroll-transition" >Here is my menu!</nav>
 ```
 
 - CSS
@@ -49,7 +49,7 @@ Before using plugin ev-menu-scroll your should add to your html files jQuery lib
 For example:
 
 ```html
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="scriptForMyMenu.js"></script>
 ```
 
