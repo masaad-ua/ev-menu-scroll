@@ -30,13 +30,13 @@ In html file you should simply create for you menu wrapper. And assign him (menu
 
 ```
  .ev-absolute{
- 	position: absolute !important;
- 	top: 0 !important;
- 	left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
  }
  .ev-scroll-transition{
- 	-webkit-transition: webkit-transform .3s linear;
- 	transition: transform .3s linear;
+    -webkit-transition: webkit-transform .3s linear;
+    transition: transform .3s linear;
  }
  .ev-custom{
     your style!
@@ -55,6 +55,11 @@ For example:
 
 In you script you have to create abject with properties - parameters, which help to tune menu.
 - `startShow` (_Number_) - amount of px which define when menu start to be show in top of browser if we scrolling window from top to bottom.
+- `endShow` (_Number_) - amount of px which define when menu end to be show in top of browser if we scrolling window from bottom to top.
+- `animate` (_Boolean_) - tune on(true) or off(false) animation for showing or hiding menu.
+- `fixedAlways` (_Boolean_) - tune on(true) or off(false) for always fixing menu container in the top of window.
+- `fixedWhenUp` (_Boolean_) - tune on(true) or off(false) for fixing menu container in top of window when scrolling to top.
+
 
 ```javascript
 
