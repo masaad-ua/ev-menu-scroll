@@ -1,24 +1,24 @@
-.vm-absolute{
+.ev-absolute{
 	position: absolute !important;
 	top: 0 !important;
 	left: 0 !important;
 }
-.vm-scroll-transition{
+.ev-scroll-transition{
 	-webkit-transition: webkit-transform .3s linear;
 	transition: transform .3s linear;
 }
 /*.vm-scroll-start{*/
-/*-moz-transform: translateY(0px); !* Для Firefox *!*/
-/*-ms-transform: translateY(0px); !* Для IE *!*/
-/*-webkit-transform: translateY(0px); !* Для Safari, Chrome, iOS *!*/
-/*-o-transform: translateY(0px); !* Для Opera *!*/
+/*-moz-transform: translateY(0px); !* Firefox *!*/
+/*-ms-transform: translateY(0px); !* IE *!*/
+/*-webkit-transform: translateY(0px); !* Safari, Chrome, iOS *!*/
+/*-o-transform: translateY(0px); !* Opera *!*/
 /*transform: translateY(0px);*/
 /*}*/
 
 /*.vm-scroll-finish{*/
-/*-moz-transform: translateY(100px); !* Для Firefox *!*/
-/*-ms-transform: translateY(100px); !* Для IE *!*/
-/*-webkit-transform: translateY(100px); !* Для Safari, Chrome, iOS *!*/
-/*-o-transform: translateY(100px); !* Для Opera *!*/
+/*-moz-transform: translateY(100px); !* Firefox *!*/
+/*-ms-transform: translateY(100px); !* IE *!*/
+/*-webkit-transform: translateY(100px); !* Safari, Chrome, iOS *!*/
+/*-o-transform: translateY(100px); !* Opera *!*/
 /*transform: translateY(100px);*/
 /*}*/
