@@ -50,7 +50,10 @@ Before using plugin ev-menu-scroll your should add to your html files jQuery lib
 For example:
 
 ```html
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="ev-menu-scroll.js"></script>
+   
     <script src="scriptForMyMenu.js"></script>
 ```
 
