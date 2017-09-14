@@ -23,16 +23,17 @@ Plugin which help to tune the effect show and hide horizontal menu-panel.
 In html file you should simply create for you menu wrapper. And assign him (menu wrapper) id.
 
 ```html
-  <nav id="menuWrapper" class="ev-scroll-transition" >Here is my menu!</nav>
+  <nav id="menuWrapper" class="ev-scroll-transition ev-absolute" >Here is my menu!</nav>
 ```
 
 - CSS
 
 ```
  .ev-absolute{
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
  }
  .ev-scroll-transition{
     -webkit-transition: webkit-transform .3s linear;
