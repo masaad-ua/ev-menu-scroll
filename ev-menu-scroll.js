@@ -13,7 +13,7 @@
 
 			parentOfMenu.prepend($('<div/>')
 				.addClass('empty-block')
-				.css({'position': 'static', 'width': '100%'}));
+				.css({'position': 'static', 'width': '100%','height': heightMenu}));
 
 
 		function showMenu(){
