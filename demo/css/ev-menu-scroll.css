@@ -1,7 +1,8 @@
 .ev-absolute{
-	position: absolute !important;
-	top: 0 !important;
-	left: 0 !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
 }
 .ev-scroll-transition{
 	-webkit-transition: webkit-transform .3s linear;
