@@ -4,7 +4,7 @@ Plugin which help to tune the effect show and hide horizontal menu-panel.
 
 ### Installation
 
-- Bower( IS NOT AVALABLE NOW! )
+- Bower
 
 ```bash
    bower install ev-menu-scroll
@@ -53,7 +53,7 @@ For example:
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="ev-menu-scroll.js"></script>
-   
+
     <script src="scriptForMyMenu.js"></script>
 ```
 
